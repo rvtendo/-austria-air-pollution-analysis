@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+
+<head>
+    <base href="">
+    <title>My WebGIS - Map</title>
+
+    <!--StyleSheets-->
+    <!--Always, the library scripts go before your own scripts. The order is important!-->
+    <link rel="stylesheet" href="libraries/v8.2.0-package/ol.css">
+    <script src="libraries/v8.2.0-package/dist/ol.js"></script>
+    <!--Here your own styles-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <div id="page">
+    <nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div id="colorlib-logo"><a href="index.html">Group<span>Nine.</span></a></div>
+					</div>
+					<div class="col-md-10 text-right menu-1">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="workflow.html">Workflow</a></li>
+							
+							<li class="has-dropdown">
+								<a href="Results.html">Results</a>
+								<ul class="dropdown">
+									<li><a href="#">menu 1</a></li>
+									<li><a href="#">menu 2</a></li>
+									<li><a href="#">menu 3</a></li>
+									<li><a href="#">menu 4</a></li>
+								</ul>
+							</li>
+							<li class="btn-cta"><a href="map.html"><span>Interactive Map</span></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+    <!-- The first header of the page -->
+    <h1 style="text-align:center;">My WebGIS</h1>
+
+    <!-- This div will hold the complete map -->
+    <div id="map">
+
+    </div>
+    <button id="toggleCorine" class="custom-button">
+        Toggle Corine Layers
+    </button>
+</div>
+    <!--Scripts-->
+    <!--Always the scripts at the end-->
+    <script src="js/map.js"></script>
+</body>
+
+</html>

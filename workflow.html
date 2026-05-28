@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Lawfirm Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="colorlib-loader"></div>
+	
+	<div id="page">
+	<nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div id="colorlib-logo"><a href="index.html">Group<span>Nine.</span></a></div>
+					</div>
+					<div class="col-md-10 text-right menu-1">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="workflow.html">Workflow</a></li>
+							
+							<li class="has-dropdown">
+								<a href="Results.html">Results</a>
+								<ul class="dropdown">
+									<li><a href="#">menu 1</a></li>
+									<li><a href="#">menu 2</a></li>
+									<li><a href="#">menu 3</a></li>
+									<li><a href="#">menu 4</a></li>
+								</ul>
+							</li>
+							<li class="btn-cta"><a href="map.html"><span>Interactive Map</span></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<aside id="colorlib-hero" class="js-fullheight">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+		   	<li style="background-image: url(images/smog.jpg);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner desc">
+		   					<h2 class="heading-section">Workflow</h2>
+		   					<p class="colorlib-lead">    This section outlines the workflow and methodology used to analyse and visualize air pollution data within the project.</p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside>
+	
+	<div id="colorlib-practice">
+		<div class="container">
+			<div class="row">
+				<h2> This is the work flow we followed for our project</h2>
+				<p>This workflow presents the methodology and geospatial analysis procedures used throughout the project to investigate atmospheric pollutants including NO₂, PM10, and PM2.5. The workflow integrates environmental datasets, remote sensing products, GIS processing techniques, land cover analysis, and population exposure assessment to support air quality monitoring and visualization through a WebGIS platform.</p>
+
+			</div>	
+		</div>
+	</div>
+<div id="colorlib-practice">
+		<div class="container">
+			<div class="row">
+				<h2>Data Collection and Preprocessing</h2>
+				<h3> Study Area and Data Acquisition</h3>
+				<p>The first stage of the project involved the acquisition of environmental and geospatial datasets required for air pollution analysis. The study area was defined using vector boundary datasets processed within QGIS to establish the area of interest for subsequent analysis. Air pollution datasets for NO₂, PM10, and PM2.5 were obtained from the Copernicus Atmosphere Monitoring Service (CAMS) Reanalysis database in NetCDF format for the years 2021 and 2023. Additional environmental datasets included the ESRI 10m Annual Land Cover data for land cover analysis and WorldPop population datasets for population exposure assessment.</p>
+				<h3>Data Preprocessing</h3>
+				<p>Following data acquisition, preprocessing operations were conducted to prepare the datasets for spatial analysis. Raster layers were reprojected into a common coordinate reference system (WGS84 EPSG:4326), merged where necessary, and clipped to the study area boundary to improve processing efficiency. NetCDF pollutant datasets were imported into QGIS and converted into raster layers suitable for visualization and analysis. Land cover and population datasets were also cleaned, classified, and standardized to ensure compatibility across all analytical processes.</p>
+			</div>	
+		</div>
+	</div>
+<div id="colorlib-practice">
+		<div class="container">
+			<div class="row">
+				<h2>Spatial Analysis</h2>
+				<p>Spatial analysis techniques were applied to investigate atmospheric pollution patterns and land cover dynamics across the study area. Average annual concentration maps for NO₂, PM10, and PM2.5 were generated and classified according to environmental health guidelines. Land cover change detection analysis was performed between 2021 and 2023 to identify transitions in land surface characteristics and examine potential relationships between land cover changes and air pollution distribution.</p>
+
+			</div>	
+		</div>
+	</div>
+
+	<div id="colorlib-practice">
+		<div class="container">
+			<div class="row">
+				<h2>Population Exposure Assessment</h2>
+				<p>Population exposure analysis was conducted using WorldPop population count datasets to evaluate the relationship between pollutant concentrations and population distribution. Population rasters were classified into quantile-based classes, enabling the identification of areas where larger populations may be exposed to elevated levels of atmospheric pollutants.</p>
+
+			</div>	
+		</div>
+	</div>
+	<div id="colorlib-practice">
+		<div class="container">
+			<div class="row">
+				<h2>WebGIS Visualization</h2>
+				<p>The final stage of the project involved the visualization of analytical outputs through an interactive WebGIS platform. The WebGIS environment allows users to explore pollutant concentration maps, land cover transitions, and population exposure results interactively. This platform supports a more dynamic understanding of spatial pollution patterns and demonstrates the application of GIS and WebGIS technologies in environmental monitoring and air quality assessment.</p>
+				<a href="map.html"><span class="btn-cta">Interactive Map</span></a> 
+			</div>	
+		</div>
+	</div>
+	
+	<footer id="colorlib-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+					<small class="block">&copy; 2026 GroupNine. All Rights Reserved. </small>
+					</p>
+					<p>
+						<ul class="colorlib-social-icons">
+							<li><a href="#"><i class="icon-github"></i></a></li>
+							
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
