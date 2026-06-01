@@ -51,6 +51,54 @@
 	<![endif]-->
 
 	</head>
+	<!--adding pop up-->
+	<div id="mapModal" class="map-modal">
+		<div class="map-modal-box">
+		  <span class="close-map">&times;</span>
+		  <img id="modalMapImage" alt="Large map preview">
+		</div>
+	  </div>
+	  
+	  <script>
+		const mapModal = document.getElementById("mapModal");
+		const modalMapImage = document.getElementById("modalMapImage");
+		const closeMap = document.querySelector(".close-map");
+	  
+		document.querySelectorAll(".analysis-card img").forEach(function(img) {
+		  img.addEventListener("click", function() {
+			mapModal.style.display = "flex";
+			modalMapImage.src = this.src;
+		  });
+		});
+	  
+		closeMap.addEventListener("click", function() {
+		  mapModal.style.display = "none";
+		});
+	  
+		mapModal.addEventListener("click", function(e) {
+		  if (e.target === mapModal) {
+			mapModal.style.display = "none";
+		  }
+		});
+	  </script>
+
+<div id="mapModal" class="map-modal">
+	<div class="map-modal-box">
+	  <span onclick="closeMapModal()" class="close-map">&times;</span>
+	  <img id="modalMapImage">
+	</div>
+  </div>
+  
+  <script>
+  function openMapModal(src) {
+	document.getElementById("mapModal").style.display = "flex";
+	document.getElementById("modalMapImage").src = src;
+  }
+  
+  function closeMapModal() {
+	document.getElementById("mapModal").style.display = "none";
+  }
+  </script>
 	<body>
 		
 	<div class="colorlib-loader"></div>
@@ -111,110 +159,143 @@
 				<h2>Our Research Findings</h2>
 				<p>This section presents the results obtained from the air pollution analysis conducted using GIS and WebGIS technologies. The outputs include spatial distribution maps of NO₂, PM10, and PM2.5, land cover change detection results, and population exposure analysis. These visualizations provide insights into atmospheric pollution patterns and their potential relationship with land cover dynamics and population distribution across the study area.</p>
 				<h2>Pollutant Results</h2>
-				<h3>NO₂ Levels</h3>
-<p>MAP</p>
-
-<div class="row">
-
-    <div class="col-md-4 text-center animate-box">
-        <div class="desc">
-            <h3>Hotspots</h3>
-            <p>
-                High concentration regions were identified in densely urbanized areas.
-            </p>
-        </div>
-    </div>
-
-    <div class="col-md-4 text-center animate-box">
-        <div class="desc">
-            <h3>Urban Influence</h3>
-            <p>
-                Pollution patterns showed strong relationships with transportation and industrial activity.
-            </p>
-        </div>
-    </div>
-
-    <div class="col-md-4 text-center animate-box">
-        <div class="desc">
-            <h3>Health Concerns</h3>
-            <p>
-                Elevated NO₂ concentrations may contribute to respiratory and environmental health risks.
-            </p>
-        </div>
-    </div>
-
-</div>
-				</div>
-				<h3>PM10 Levels</h3>
 				
-<p>MAP</p>
 
-<div class="row">
+<!-- NO2 -->
+<h3>NO₂ Levels</h3>
 
-    <div class="col-md-4 text-center animate-box">
-        <div class="desc">
-            <h3>Hotspots</h3>
-            <p>
-                High concentration regions were identified in densely urbanized areas.
-            </p>
-        </div>
-    </div>
+<div class="analysis-grid">
 
-    <div class="col-md-4 text-center animate-box">
-        <div class="desc">
-            <h3>Urban Influence</h3>
-            <p>
-                Pollution patterns showed strong relationships with transportation and industrial activity.
-            </p>
-        </div>
-    </div>
+  <div class="analysis-card">
+    <h4>AMAC MAP</h4>
+    <img src="images/no2_amac_map.png" alt="NO2 AMAC Map" onclick="openMapModal(this.src)"> <!--adding pop up-->
+    <p>Write the explanation of the AMAC analysis results here.</p>
+  </div>
 
-    <div class="col-md-4 text-center animate-box">
-        <div class="desc">
-            <h3>Health Concerns</h3>
-            <p>
-                Elevated NO₂ concentrations may contribute to respiratory and environmental health risks.
-            </p>
-        </div>
-    </div>
 
-</div>
-				<h3>NO₂ Levels</h3>
-<p>MAP</p>
+  <div class="analysis-card">
+    <h4>Zonal Statistic</h4>
+    <img src="images/no2_zonal_statistic.png" alt="NO2 Zonal Statistic" onclick="openMapModal(this.src)"> <!--adding pop up-->
+    <p>Write the explanation of the zonal statistics results here.</p>
+  </div>
+  
 
-<div class="row">
 
-    <div class="col-md-4 text-center animate-box">
-        <div class="desc">
-            <h3>Hotspots</h3>
-            <p>
-                High concentration regions were identified in densely urbanized areas.
-            </p>
-        </div>
-    </div>
+  <div class="analysis-card">
+    <h4>Bivariate Analysis</h4>
+    <img src="images/Austria_no2_2023_chart.png" alt="NO2 Bivariate Analysis" onclick="openMapModal(this.src)"> <!--adding pop up-->
+    <p>Write the explanation of the bivariate analysis results here.</p>
+  </div>
+  
 
-    <div class="col-md-4 text-center animate-box">
-        <div class="desc">
-            <h3>Urban Influence</h3>
-            <p>
-                Pollution patterns showed strong relationships with transportation and industrial activity.
-            </p>
-        </div>
-    </div>
 
-    <div class="col-md-4 text-center animate-box">
-        <div class="desc">
-            <h3>Health Concerns</h3>
-            <p>
-                Elevated NO₂ concentrations may contribute to respiratory and environmental health risks.
-            </p>
-        </div>
-    </div>
+
 
 </div>
-			</div>
-		</div>
-	</div>
+
+<div class="insight-grid">
+  <div class="insight-card">
+    <h3>Hotspots</h3>
+    <p>High concentration regions were identified in densely urbanized areas.</p>
+  </div>
+
+  <div class="insight-card">
+    <h3>Urban Influence</h3>
+    <p>Pollution patterns showed strong relationships with transportation and industrial activity.</p>
+  </div>
+
+  <div class="insight-card">
+    <h3>Health Concerns</h3>
+    <p>Elevated NO₂ concentrations may contribute to respiratory and environmental health risks.</p>
+  </div>
+</div>
+
+
+<!-- PM10 -->
+<h3>PM10 Levels</h3>
+
+<div class="analysis-grid">
+
+  <div class="analysis-card">
+    <h4>AMAC MAP</h4>
+    <img src="images/pm10_amac_map.png" alt="PM10 AMAC Map" onclick="openMapModal(this.src)"> <!--adding pop up-->
+    <p>Write the explanation of the AMAC analysis results here.</p>
+  </div>
+
+  <div class="analysis-card">
+    <h4>Zonal Statistic</h4>
+    <img src="images/pm10_zonal_statistic.png" alt="PM10 Zonal Statistic" onclick="openMapModal(this.src)"> <!--adding pop up-->
+    <p>Write the explanation of the zonal statistics results here.</p>
+  </div>
+
+  <div class="analysis-card">
+    <h4>Bivariate Analysis</h4>
+    <img src="images/Austria_pm10_2023_chart.png" alt="PM10 Bivariate Analysis" onclick="openMapModal(this.src)">  <!--adding pop up-->
+    <p>Write the explanation of the bivariate analysis results here.</p>
+  </div>
+
+</div>
+
+<div class="insight-grid">
+  <div class="insight-card">
+    <h3>Hotspots</h3>
+    <p>High concentration regions were identified in densely urbanized areas.</p>
+  </div>
+
+  <div class="insight-card">
+    <h3>Urban Influence</h3>
+    <p>Pollution patterns showed strong relationships with transportation and industrial activity.</p>
+  </div>
+
+  <div class="insight-card">
+    <h3>Health Concerns</h3>
+    <p>Elevated PM10 concentrations may contribute to respiratory and environmental health risks.</p>
+  </div>
+</div>
+
+
+<!-- PM2.5 -->
+<h3>PM2.5 Levels</h3>
+
+<div class="analysis-grid">
+
+  <div class="analysis-card">
+    <h4>AMAC MAP</h4>
+    <img src="images/pm25_amac_map.png" alt="PM25 AMAC Map" onclick="openMapModal(this.src)">  <!--adding pop up-->
+    <p>Write the explanation of the AMAC analysis results here.</p>
+  </div>
+
+  <div class="analysis-card">
+    <h4>Zonal Statistic</h4>
+    <img src="images/pm25_zonal_statistic.png" alt="PM25 Zonal Statistic" onclick="openMapModal(this.src)">  <!--adding pop up-->
+    <p>Write the explanation of the zonal statistics results here.</p>
+  </div>
+
+  <div class="analysis-card">
+    <h4>Bivariate Analysis</h4>
+    <img src="images/Austria_pm2p5_2023_chart.png" alt="PM25 Bivariate Analysis" onclick="openMapModal(this.src)">  <!--adding pop up-->
+    <p>Write the explanation of the bivariate analysis results here.</p>
+  </div>
+
+</div>
+
+<div class="insight-grid">
+  <div class="insight-card">
+    <h3>Hotspots</h3>
+    <p>High concentration regions were identified in densely urbanized areas.</p>
+  </div>
+
+  <div class="insight-card">
+    <h3>Urban Influence</h3>
+    <p>Pollution patterns showed strong relationships with transportation and industrial activity.</p>
+  </div>
+
+  <div class="insight-card">
+    <h3>Health Concerns</h3>
+    <p>Elevated PM2.5 concentrations may contribute to respiratory and environmental health risks.</p>
+  </div>
+</div>
+
 
 	<div id="colorlib-practice">
 		<div class="container">
@@ -232,8 +313,6 @@
 	
 	<footer id="colorlib-footer" role="contentinfo">
 		<div class="container">
-			<div class="row row-pb-md">
-			</div>
 
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
