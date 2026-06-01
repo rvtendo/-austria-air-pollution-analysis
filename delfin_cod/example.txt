@@ -1,2 +1,0 @@
-example of interactive map
-https://gispub.epa.gov/airnow/?contours=pm25&xmin=-19907292.33016017&xmax=-1122128.2588002477&ymin=408052.5789203048&ymax=8460234.886591772&monitors=ozonepm
