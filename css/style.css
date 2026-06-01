@@ -11,7 +11,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.7;
@@ -57,7 +57,7 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0; }
 
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6, figure {
   text-transform: uppercase;
   font-weight: bold;
   font-weight: 700;
-  font-family: "Playfair Display", Georgia, serif; }
+  font-family: 'Inter', sans-serif; }
   .colorlib-nav #colorlib-logo a {
     color: #bea34d; }
     .colorlib-nav #colorlib-logo a span {
@@ -279,7 +279,8 @@ h1, h2, h3, h4, h5, h6, figure {
         background-size: cover;
         background-position: center center;
         min-height: 600px;
-        position: relative; }
+        position: relative;
+         }
         #colorlib-hero .flexslider .slides li:after {
           position: absolute;
           top: 0;
@@ -287,8 +288,20 @@ h1, h2, h3, h4, h5, h6, figure {
           left: 0;
           right: 0;
           content: '';
-          background: rgba(255, 255, 255, 0.75);
-          z-index: 1; }
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        
+          content: '';
+        
+          z-index: 1;
+        
+          /* soft white opacity */
+          background: rgba(255, 255, 255, 0.45);
+         }
     #colorlib-hero .flexslider .flex-control-nav {
       bottom: 40px;
       z-index: 1000; }
@@ -312,18 +325,35 @@ h1, h2, h3, h4, h5, h6, figure {
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
         display: table-cell;
         vertical-align: middle;
+        padding-top: 80px;
         min-height: 600px; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1, #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
           margin: 0;
           padding: 0;
           color: #222; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
-          margin-bottom: 20px;
-          font-size: 44px;
-          line-height: 1.3;
+          margin-bottom: 35px;
+          text-align: center;
+          font-size: 52px;
+          line-height: 1.15;
           font-weight: 700;
           text-transform: uppercase;
-          letter-spacing: 1px; }
+          letter-spacing: 1px; 
+          font-family: 'Montserrat', sans-serif;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 1100px;
+
+          color: #5e2f2f;
+         
+          
+        
+      
+          position: relative;
+          z-index: 5;
+          
+    
+          }
           @media screen and (max-width: 768px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
               font-size: 30px; } }
@@ -334,10 +364,11 @@ h1, h2, h3, h4, h5, h6, figure {
         #colorlib-hero .flexslider .slider-text > .slider-text-inner .heading-section {
           font-size: 50px; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
+          margin-top: 40px;
           padding: 15px 30px;
-          background: #31486f !important;
+          background: #662f15 !important;
           color: #fff;
-          border: none !important;
+          border: 2px solid rgba(201, 221, 196, 0.92);
           font-size: 18px; }
           #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn:hover {
             background: #bea34d !important;
@@ -412,7 +443,7 @@ h1, h2, h3, h4, h5, h6, figure {
     font-size: 40px;
     display: block;
     color: white;
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: 'Inter', sans-serif;
     width: 100%;
     font-weight: 700;
     margin-bottom: .3em; }
@@ -1081,7 +1112,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
   -webkit-border-radius: 30px;
@@ -1296,13 +1327,13 @@ h1, h2, h3, h4, h5, h6, figure {
 #colorlib-hero .flexslider .slides li,
 #colorlib-hero .flexslider .slider-text,
 #colorlib-hero .flexslider .slider-text > .slider-text-inner {
-    min-height: 500px !important;
-    height: 500px !important;
+    min-height: 600px !important;
+    height: 600px !important;
 }
 
 /* Hero Title */
 #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
-    font-size: 48px !important;
+    font-size: 60px !important;
     line-height: 1.2 !important;
 }
 
@@ -1330,7 +1361,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .section-title h2{
     font-size:60px;
     letter-spacing:18px;
-    color:#8b4a1f;
+    color:#8b1f1f;
     font-weight:700;
     margin-bottom:10px;
 }
@@ -1415,4 +1446,273 @@ h1, h2, h3, h4, h5, h6, figure {
     font-size:18px;
     line-height:1.8;
     color:#7a7a7a;
+}
+
+
+/* result - NO2 part  */
+.pollutant-map{
+  width:100%;
+  max-width:900px;
+  display:block;
+  margin:30px auto;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  transition:opacity .4s ease;
+}
+
+.year-buttons{
+  text-align:center;
+  margin-top:20px;
+}
+
+.year-buttons button{
+  background:#8b1f1f;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  margin:0 10px;
+  border-radius:25px;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+
+.year-buttons button:hover{
+  background:#662f15;
+}
+
+
+.workflow-images{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  margin:40px 0;
+}
+
+/* workflow - pollutant* part  */
+.workflow-card{
+  width:100%;
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.workflow-card h4{
+  text-align:center;
+  margin-bottom:20px;
+  font-size:28px;
+  color:#111;
+}
+
+.workflow-card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+.workflow-card p{
+  font-size:15px;
+  color:#666;
+  line-height:1.7;
+}
+
+.landcover-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.landcover-item{
+  text-align:center;
+}
+
+.landcover-item h5{
+  margin-bottom:10px;
+  font-size:18px;
+  color:#8b1f1f;
+}
+
+.pollutant-section {
+  margin-top: 40px;
+}
+
+.pollutant-section h4 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+.pollutant-block {
+  margin-bottom: 55px;
+  padding: 25px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.pollutant-block h5 {
+  font-size: 24px;
+  color: #8b1f1f;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.pollutant-month-img {
+  width: 100%;
+  max-width: 850px;
+  display: block;
+  margin: 0 auto 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  transition: opacity 0.3s ease;
+}
+
+.year-buttons,
+.month-buttons {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.year-buttons button,
+.month-buttons button {
+  background: #8b1f1f;
+  color: #fff;
+  border: none;
+  padding: 9px 18px;
+  margin: 5px;
+  border-radius: 22px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.month-buttons button {
+  background: #c4a646;
+}
+
+.year-buttons button:hover,
+.month-buttons button:hover {
+  background: #662f15;
+}
+
+/*result page -- result */
+
+
+.analysis-grid,
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px 0 50px;
+}
+
+.analysis-card,
+.insight-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.analysis-card h4 {
+  color: #8b1f1f;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.analysis-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.analysis-card p,
+.insight-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.insight-card h3 {
+  font-size: 24px;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.analysis-card img {
+  cursor: zoom-in;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.analysis-card img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  z-index: 10;
+}
+
+.view-map-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 18px;
+  background: #8b1f1f;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.view-map-btn:hover {
+  background: #662f15;
+  color: white;
+}
+
+
+.analysis-card img {
+  cursor: zoom-in;
+}
+
+/* adding pop up */
+
+.map-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  justify-content: center;
+  align-items: center;
+}
+
+.map-modal-box {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+#modalMapImage {
+  max-width: 85vw;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.close-map {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  background: #8b1f1f;
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  font-size: 28px;
+  cursor: pointer;
 }
