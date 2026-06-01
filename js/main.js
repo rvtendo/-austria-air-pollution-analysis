@@ -301,3 +301,99 @@
 
 
 }());
+// for result no2 pollutant - release
+function changeNO2Map(year){
+
+    const map = document.getElementById("no2Map");
+
+    map.style.opacity = 0;
+
+    setTimeout(() => {
+
+        if(year === "2021"){
+            map.src = "images/no2_2021.png";
+        } else {
+            map.src = "images/no2_2023.png";
+        }
+
+        map.style.opacity = 1;
+
+    }, 250);
+}
+
+//<!-- Pollutant -->
+const pollutantState = {
+	no2: { year: "2021", month: "01" },
+	pm10: { year: "2021", month: "01" },
+	pm25: { year: "2021", month: "01" }
+  };
+  
+const months = [
+  "Jan","Feb","Mar","Apr","May","Jun",
+  "Jul","Aug","Sep","Oct","Nov","Dec"
+];
+  
+  function updatePollutantImage(pollutant) {
+
+	const img = document.getElementById(`${pollutant}-pollutant-img`);
+  
+	const year = pollutantState[pollutant].year;
+	const month = parseInt(pollutantState[pollutant].month);
+  
+	img.style.opacity = 0;
+  
+	setTimeout(() => {
+  
+	  let prefix = "";
+  
+	  if (pollutant === "no2") {
+		prefix = "No2";
+	  } else if (pollutant === "pm10") {
+		prefix = "Pm10";
+	  } else if (pollutant === "pm25") {
+		prefix = "Pm25";
+	  }
+  
+	  img.src = `images/${prefix}_${year}_CAMS_${month}.png`;
+  
+	  img.style.opacity = 1;
+  
+	}, 200);
+  }
+  
+  function setPollutantYear(pollutant, year) {
+	pollutantState[pollutant].year = year;
+	updatePollutantImage(pollutant);
+  }
+  
+  function setPollutantMonth(pollutant, month) {
+	pollutantState[pollutant].month = month;
+	updatePollutantImage(pollutant);
+  }
+  
+  function createMonthButtons(pollutant) {
+
+	const container = document.getElementById(`${pollutant}-months`);
+  
+	months.forEach((monthName,index) => {
+  
+	  const button = document.createElement("button");
+  
+	  button.textContent = monthName;
+  
+	  button.onclick = () =>
+		setPollutantMonth(
+		  pollutant,
+		  String(index + 1)
+		);
+  
+	  container.appendChild(button);
+  
+	});
+  
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+	createMonthButtons("no2");
+	createMonthButtons("pm10");
+	createMonthButtons("pm25");
+  });
