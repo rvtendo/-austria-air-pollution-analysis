@@ -397,3 +397,36 @@ const months = [
 	createMonthButtons("pm10");
 	createMonthButtons("pm25");
   });
+
+
+
+
+
+
+//lcc part
+
+  function openLegendModal(){
+	document.getElementById("legendModal").style.display = "flex";
+  }
+  
+  function closeLegendModal(){
+	document.getElementById("legendModal").style.display = "none";
+  }
+  
+  document.addEventListener("click", function(e){
+	const modal = document.getElementById("legendModal");
+	if(e.target === modal){
+	  closeLegendModal();
+	}
+  });
+
+
+// output popup
+
+
+  function openMapModal(imagePath){
+    mapModal.style.display = "flex";
+    modalMapImage.src = imagePath;
+}
+
+
