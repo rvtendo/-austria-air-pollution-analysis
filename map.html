@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+
+<head>
+    <base href="">
+    <title>My WebGIS - Map</title>
+
+    <!--StyleSheets-->
+    <!--Always, the library scripts go before your own scripts. The order is important!-->
+    <link rel="stylesheet" href="libraries/v8.2.0-package/ol.css">
+    <script src="libraries/v8.2.0-package/dist/ol.js"></script>
+    <!--Here your own styles-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <div id="page">
+    <nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div id="colorlib-logo"><a href="index.html">Group<span>Nine.</span></a></div>
+					</div>
+					<div class="col-md-10 text-right menu-1">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="workflow.html">Workflow</a></li>
+							
+							<li class="has-dropdown">
+								<a href="Results.html">Results</a>
+								<ul class="dropdown">
+									<li><a href="#">menu 1</a></li>
+									<li><a href="#">menu 2</a></li>
+									<li><a href="#">menu 3</a></li>
+									<li><a href="#">menu 4</a></li>
+								</ul>
+							</li>
+							<li class="btn-cta"><a href="map.html"><span>Interactive Map</span></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+    <!-- The first header of the page -->
+    <h1 style="text-align:center;">My WebGIS</h1>
+
+    <!-- This div will hold the complete map -->
+	
+    <!-- population exposure classes -->
+
+	<div class="interactive-map-wrapper">
+	
+	  <div id="map"></div>
+	
+	  <div class="layer-panel">
+		<h3>Layer Control</h3>
+
+		<label>Pollution maps for December, 2023</label>
+		<label><input type="checkbox" id="no2DecemberCheck" > NO₂ </label>
+		<label><input type="checkbox" id="pm10DecemberCheck"> PM₁₀ </label>
+		<label><input type="checkbox" id="pm25DecemberCheck"> PM₂.₅ </label>
+
+		<label>Average Map for each Pollutant 2023</label>
+		<label><input type="checkbox" id="no2AverageCheck"> NO₂ </label>
+		<label><input type="checkbox" id="pm10AverageCheck"> PM₁₀ </label>
+		<label><input type="checkbox" id="pm25AverageCheck"> PM₂.₅ </label>
+
+		<label> Concentration Map for each Pollutant 2023</label>
+		<label><input type="checkbox" id="no2ConcentrationCheck"> NO₂ </label>
+		<label><input type="checkbox" id="pm10ConcentrationCheck"> PM₁₀ </label>
+		<label><input type="checkbox" id="pm25ConcentrationCheck"> PM₂.₅ </label>
+	
+		<label> Annual Mean Aggregation Change (AMAC) Map between 2021 and 2023 </label>
+		<label><input type="checkbox" id="no2AmacCheck"> NO₂ </label>
+		<label><input type="checkbox" id="pm10AmacCheck"> PM₁₀ </label>
+		<label><input type="checkbox"id="pm25AmacCheck"> PM₂.₅ </label>
+
+        <label>Land Cover Change Map from 2021 to 2023 </label>
+		<label><input type="checkbox" id="lccCheck"> LCC Map</label>
+
+
+	
+		<label> Population Exposure Bivariate Map for each Pollutant </label>
+		<label><input type="checkbox" id="no2BivariateCheck" > NO₂ </label>
+		<label><input type="checkbox" id="pm10BivariateCheck"> PM₁₀ </label>
+		<label><input type="checkbox" id="pm25BivariateCheck"> PM₂.₅ </label>
+
+		<label>Base Maps</label>
+
+<label>
+  <input type="radio" name="basemap" id="osmBase" checked>
+  OpenStreetMap
+</label>
+
+<label>
+  <input type="radio" name="basemap" id="positronBase">
+  CartoDB Positron
+</label>
+
+<label>
+  <input type="radio" name="basemap" id="imageryBase">
+  ESRI Gray Light
+</label>
+
+<hr>
+	</div>
+		<div>
+	
+			<div class="map-legend">
+				<h4 id="legendTitle"></h4>
+				<img id="legendImage" alt="Layer Legend">
+			  </div>
+			
+	
+
+    </div>
+    <button id="toggleCorine" class="custom-button">
+        Toggle Corine Layers
+    </button>
+</div>
+    <!--Scripts-->
+    <!--Always the scripts at the end-->
+    <script src="js/map.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
