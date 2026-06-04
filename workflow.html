@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Lawfirm Template</title>
+	<title>GroupNine</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -49,7 +49,16 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	<script>
+  	function openMapModal(src) {
+		document.getElementById("mapModal").style.display = "flex";
+		document.getElementById("modalMapImage").src = src;
+  	}
+  
+  	function closeMapModal() {
+		document.getElementById("mapModal").style.display = "none";
+ 	 }
+  	</script>
 	</head>
 	<body>
 		
@@ -86,7 +95,7 @@
 		</div>
 	</nav>
 
-	<aside id="colorlib-hero" class="js-fullheight">
+	<aside id="colorlib-hero" class="workflow-hero">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
 		   	<li style="background-image: url(images/smog.jpg);">
@@ -94,8 +103,8 @@
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner desc">
-		   					<h2 class="heading-section">Workflow</h2>
-		   					<p class="colorlib-lead">    This section outlines the workflow and methodology used to analyse and visualize air pollution data within the project.</p>
+		   					<h1 class="heading-section">Workflow</h1>
+		   					<p class="colorlib-lead"> <h2 class="heading-section">From Data to Decisions</h2></p>
 		   				</div>
 		   			</div>
 		   		</div>
@@ -103,143 +112,182 @@
 		  	</ul>
 	  	</div>
 	</aside>
-	
-	<div id="colorlib-practice">
-		<div class="container">
-			<div class="row">
-				<h2> This is the work flow we followed for our project</h2>
-				<p>This workflow presents the methodology and geospatial analysis procedures used throughout the project to investigate atmospheric pollutants including NO₂, PM10, and PM2.5. The workflow integrates environmental datasets, remote sensing products, GIS processing techniques, land cover analysis, and population exposure assessment to support air quality monitoring and visualization through a WebGIS platform.</p>
+	<section class="workflow-overview-section">
+    <div class="container">
+<h2 class="text-center">Workflow Overview</h2>
 
-			</div>	
-		</div>
-	</div>
+        <p class="text-center workflow-caption">
+
+            Summary of the methodological framework used to analyse air pollution,
+
+            land cover dynamics, and population exposure across Austria.
+
+        </p>
+        <figure class="workflow-figure">
+            <img src="images/methodology.svg"
+                 alt="Workflow Overview"
+                 class="img-responsive center-block"
+                 >
+
+            <figcaption>
+                Figure 1. Overview of the project workflow from data collection
+                to WebGIS integration. 
+            </figcaption>
+        </figure>
+
+    </div>
+</section>
 <div id="colorlib-practice">
 		<div class="container">
 			<div class="row">
-				<h2>Data Collection and Preprocessing</h2>
+				<h1>Data Collection and Preprocessing</h1>
 				<h3> Study Area and Data Acquisition</h3>
-				<p>The first stage of the project involved the acquisition of environmental and geospatial datasets required for air pollution analysis. The study area was defined using vector boundary datasets processed within QGIS to establish the area of interest for subsequent analysis. Air pollution datasets for NO₂, PM10, and PM2.5 were obtained from the Copernicus Atmosphere Monitoring Service (CAMS) Reanalysis database in NetCDF format for the years 2021 and 2023. Additional environmental datasets included the ESRI 10m Annual Land Cover data for land cover analysis and WorldPop population datasets for population exposure assessment.</p>
-				<div class="workflow-images">
-
-					<!-- STUDY AREA -->
-					<div class="workflow-card">
-						<h4>Study Area</h4>
-				
-						<img src="images/Austria.png" alt="Study Area">
-				
-						<p>
-							The study area consists of Austria and its administrative regions.
-							Boundary datasets were used to define the analysis extent for all
-							subsequent geospatial operations.
-						</p>
-					</div>
-				
-					<!-- LAND COVER -->
-					<div class="workflow-card">
-						<h4>Land Cover</h4>
-				
-						<div class="landcover-grid">
-				
-							<div class="landcover-item">
-								<h5>Merged 2021</h5>
-								<img src="images/landcover_2021.png" alt="Land Cover 2021">
-				
-								<p>
-									ESRI Annual Land Cover dataset merged and clipped
-									for the year 2021.
-								</p>
-							</div>
-				
-							<div class="landcover-item">
-								<h5>Merged 2023</h5>
-								<img src="images/landcover_2023.png" alt="Land Cover 2023">
-				
-								<p>
-									ESRI Annual Land Cover dataset merged and clipped
-									for the year 2023.
-								</p>
-							</div>
-				
-						</div>
-					</div>
-					<!-- Pollutant -->
-					<div class="workflow-card pollutant-section">
-						<h4>Pollutant</h4>
-					  
-						<div class="pollutant-block">
-						  <h5>NO₂</h5>
-						  <img id="no2-pollutant-img" class="pollutant-month-img" src="images/No2_2021_CAMS_1.png" alt="NO2 January 2021">
-					  
-						  <div class="year-buttons">
-							<button onclick="setPollutantYear('no2', '2021')">2021</button>
-							<button onclick="setPollutantYear('no2', '2023')">2023</button>
-						  </div>
-					  
-						  <div class="month-buttons" id="no2-months"></div>
-						</div>
-					  
-						<div class="pollutant-block">
-						  <h5>PM10</h5>
-						  <img id="pm10-pollutant-img" class="pollutant-month-img" src="images/Pm10_2021_CAMS_1.png" alt="PM10 January 2021">
-					  
-						  <div class="year-buttons">
-							<button onclick="setPollutantYear('pm10', '2021')">2021</button>
-							<button onclick="setPollutantYear('pm10', '2023')">2023</button>
-						  </div>
-					  
-						  <div class="month-buttons" id="pm10-months"></div>
-						</div>
-					  
-						<div class="pollutant-block">
-						  <h5>PM2.5</h5>
-						  <img id="pm25-pollutant-img" class="pollutant-month-img" src="images/Pm25_2021_CAMS_1.png" alt="PM25 January 2021">
-					  
-						  <div class="year-buttons">
-							<button onclick="setPollutantYear('pm25', '2021')">2021</button>
-							<button onclick="setPollutantYear('pm25', '2023')">2023</button>
-						  </div>
-					  
-						  <div class="month-buttons" id="pm25-months"></div>
-						</div>
-					  </div>
-				
-				</div>
+				<p>The project focused on Austria as the study area for investigating the spatial distribution of air pollution, land cover dynamics, and population exposure. Austria was selected due to the availability of environmental datasets and its diverse geographical characteristics, including urban centres, agricultural regions, and mountainous landscapes. Defining the study area was an essential first step, as it established the spatial extent for all subsequent analyses and ensured consistency across the datasets.</p>
+				<p>To support the investigation, environmental and demographic datasets were acquired from a range of authoritative sources. Air quality data for nitrogen dioxide (NO₂), particulate matter less than 10 micrometres (PM10), and particulate matter less than 2.5 micrometres (PM2.5) were obtained from the Copernicus Atmosphere Monitoring Service (CAMS) Reanalysis database for the years 2021 and 2023. Land cover information was sourced from the ESRI 10 m Annual Land Cover dataset, while population distribution data for 2023 were obtained from WorldPop. Together, these datasets provided the environmental and demographic information required to analyse pollution patterns, land cover change, and potential population exposure across Austria.</p>
 				<h3>Data Preprocessing</h3>
-				<p>Following data acquisition, preprocessing operations were conducted to prepare the datasets for spatial analysis. Raster layers were reprojected into a common coordinate reference system (WGS84 EPSG:4326), merged where necessary, and clipped to the study area boundary to improve processing efficiency. NetCDF pollutant datasets were imported into QGIS and converted into raster layers suitable for visualization and analysis. Land cover and population datasets were also cleaned, classified, and standardized to ensure compatibility across all analytical processes.</p>
+				<p>Following data acquisition, a series of preprocessing operations were performed to prepare the datasets for spatial analysis. Because the data originated from different sources and formats, standardisation was necessary to ensure compatibility within the GIS environment. All datasets were organised and processed using QGIS to create a consistent analytical framework.</p>
+				<p>Raster layers were reprojected to a common coordinate reference system (WGS84 EPSG:4326), clipped to the Austria study area boundary, and checked for spatial consistency. The CAMS pollutant datasets, originally provided in NetCDF format, were converted into raster layers suitable for mapping and analysis. Monthly pollutant datasets were organised by year and pollutant type to support the generation of annual averages, concentration maps, and change detection analyses.</p>
+				<p>Additional preprocessing was carried out on the land cover and population datasets. Land cover layers were prepared for change detection analysis, while population data were cleaned and standardised for use in the Population Exposure Assessment. Cartographic styling was also applied to improve map visualisation and ensure consistency across all outputs. These preprocessing steps established a reliable foundation for the spatial analyses presented in the subsequent stages of the project.</p>
 			</div>	
 		</div>
 	</div>
-<div id="colorlib-practice">
-		<div class="container">
+	<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="analysis-card">
+                <h4>Study Area</h4>
+                <img src="images/studyarea_placeholder.png" alt="Study Area" onclick="openMapModal(this.src)">
+                <p>This map presents the study area, Austria, which serves as the focus of the air pollution and land cover analysis.</p>
+				<p class="image-note">Click on the image to view it in full size.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="analysis-card">
+                <h4>Land Cover Change</h4>
+                <img src="images/landcover_placeholder.png" alt="Land Cover Change" onclick="openMapModal(this.src)">
+                <p>This map shows the preprocessed land cover dataset for the study area.</p>  
+				<p class="image-note">Click on the image to view it in full size.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="analysis-card">
+                <h4>NO₂ Map</h4>
+                <img src="images/no2_placeholder.png" alt="NO2 Map" onclick="openMapModal(this.src)">
+                <p>This map displays a preprocessed NO₂ dataset for Austria. Similar preprocessing steps were applied to all NO₂ datasets for 2021 and 2023. </p> 
+				<p>
+				
+				</p>
+				<p class="image-note">Click on the image to view it in full size.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="analysis-card">
+                <h4>PM10 Map</h4>
+                <img src="images/pm10_placeholder.png" alt="PM10 Map" onclick="openMapModal(this.src)">
+                <p>This map shows a preprocessed PM10 concentration dataset for Austria. Similar preprocessing steps were applied to all PM10 datasets for the years 2021 and 2023. </p>
+				<p class="image-note">Click on the image to view it in full size.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="analysis-card">
+                <h4>PM2.5 Map</h4>
+                <img src="images/pm25_placeholder.png" alt="PM2.5 Map" onclick="openMapModal(this.src)">
+                <p>This map shows a preprocessed PM2.5 concentration dataset for Austria. Similar preprocessing steps were applied to all PM2.5 datasets for the years 2021 and 2023. </p>
+				<p class="image-note">Click on the image to view it in full size.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<section class="workflow-section">
+<div class="container">
 			<div class="row">
 				<h2>Spatial Analysis</h2>
-				<p>Spatial analysis techniques were applied to investigate atmospheric pollution patterns and land cover dynamics across the study area. Average annual concentration maps for NO₂, PM10, and PM2.5 were generated and classified according to environmental health guidelines. Land cover change detection analysis was performed between 2021 and 2023 to identify transitions in land surface characteristics and examine potential relationships between land cover changes and air pollution distribution.</p>
+				<p>Following data preprocessing, spatial analysis was conducted to investigate the distribution of air pollutants and land cover dynamics across Austria. The analysis focused on nitrogen dioxide (NO₂), particulate matter less than 10 micrometres (PM10), particulate matter less than 2.5 micrometres (PM2.5), and land cover datasets for 2021 and 2023.</p>
 
+				<p>Monthly pollutant maps were generated for all months in 2021 and 2023 to examine temporal variations in air quality. These datasets were subsequently aggregated to produce annual average and concentration maps for each pollutant, providing an overview of spatial pollution patterns across the study area.</p>
+
+				<p>Annual Mean Aggregation Change (AMAC) analysis was performed to assess changes in pollutant concentrations between 2021 and 2023. The resulting maps highlighted areas where air quality conditions improved or deteriorated over time. In parallel, land cover change analysis was conducted using annual land cover datasets to identify transitions between land cover classes and evaluate landscape changes during the study period.</p>
+
+				<p>Zonal Statistics were then applied to calculate mean, minimum, and maximum pollutant concentrations within defined spatial units, supporting regional comparisons and the identification of areas experiencing elevated pollution levels. Bivariate Analysis was subsequently performed to examine relationships between pollutant concentrations, land cover characteristics, and population distribution. The outputs of these analyses provided the foundation for the subsequent Population Exposure Assessment and the development of visual summaries integrated into the WebGIS platform.</p>
+
+				
 			</div>	
+			
 		</div>
-	</div>
+    <div class="row">
+        <div class="col-md-12 text-center">
 
+            <h2>flowchart</h2>
+
+            <!-- <p class="workflow-description">
+                This chart illustrates the processing of NO₂, PM10, PM2.5, and land cover datasets,
+                including map generation, change detection, zonal statistics,
+                bivariate analysis, population exposure assessment, and WebGIS integration.
+            </p>
+ -->
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-10 col-md-offset-1 text-center">
+        <img src="images/flowsvg.svg"
+             alt="Spatial Analysis Workflow"
+             class="img-responsive center-block workflow-image"
+             >
+			
+         <p class="workflow-note">
+            figure 2. This chart illustrates the processing of NO₂, PM10, PM2.5, and land cover datasets,
+                including map generation, change detection, zonal statistics,
+                bivariate analysis, population exposure assessment, and WebGIS integration.
+        </p> 
+    </div>
+</div>
+
+</section>
+
+<section>
 	<div id="colorlib-practice">
 		<div class="container">
 			<div class="row">
 				<h2>Population Exposure Assessment</h2>
-				<p>Population exposure analysis was conducted using WorldPop population count datasets to evaluate the relationship between pollutant concentrations and population distribution. Population rasters were classified into quantile-based classes, enabling the identification of areas where larger populations may be exposed to elevated levels of atmospheric pollutants.</p>
-				<div class="workflow-card population-card">
+				<p>Using the pollutant concentration maps generated during the spatial analysis phase, a Population Exposure Assessment was conducted to evaluate potential exposure across Austria. Population count data for 2023 were obtained from WorldPop and integrated with pollutant concentration datasets for NO₂, PM10, and PM2.5. This analysis identified areas where elevated pollution levels overlap with higher population densities, providing insight into potential exposure patterns across the study area. </p>
 
-					<h4>Population Distribution Map</h4>
-				
-					<img src="images/population.png"
-						 alt="Population Distribution"
-						 class="population-map">
-				
-					<p>
-						Population distribution data were incorporated to evaluate the spatial relationship between population density and air pollution exposure. The map highlights areas with higher population concentrations, providing a basis for assessing potential human exposure to pollutants across Austria.
-					</p>
-				
-				</div>
 			</div>	
 		</div>
 	</div>
+	<div class="row">
+	<div class="col-md-8 col-md-offset-2 text-center">
+	<div class="analysis-card">
+    <h4>Population Distribution Map</h4>
+
+    <img src="images/pop_placeholder.png"
+     class="population-map"
+     alt="Austria Population Distribution 2023"
+     onclick="openMapModal(this.src)">
+
+    <p>
+        Population count data for Austria in 2023 obtained from WorldPop.
+        The dataset provides the spatial distribution of population across
+        the study area and was integrated with pollutant concentration maps
+        to assess potential population exposure to air pollution. Click on
+        the image to view it in full size.
+    </p>
+	</div>
+	</div>
+	</div>
+	</section>
 	<div id="colorlib-practice">
 		<div class="container">
 			<div class="row">
@@ -276,7 +324,12 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
+	<div id="mapModal" class="map-modal" onclick="closeMapModal()">
+    <div class="map-modal-box" onclick="event.stopPropagation()">
+        <span class="close-map" onclick="closeMapModal()">&times;</span>
+        <img id="modalMapImage" src="" alt="Expanded Map">
+    </div>
+</div>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
