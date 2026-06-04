@@ -2347,3 +2347,52 @@ body{
   font-size:15px;
 }
 
+/* Study Area section zeynep */
+#study-area .study-area-title {
+  margin-bottom: 25px;
+}
+
+#study-area .study-area-title h2 {
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #111;
+  text-align: center;
+}
+
+#study-area img {
+  width: 75%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Study Area paragraph */
+#study-area .col-md-6:last-child {
+  max-width: 720px;
+}
+
+#study-area p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* Source Code Footer START */
+#colorlib-footer .source-code-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+#colorlib-footer .colorlib-social-icons li a {
+  font-size: 30px;
+  color: #c0a44c;
+}
+
+#colorlib-footer .colorlib-social-icons li a:hover {
+  color: #fff;
+}
+/*Source Code Footer END */
