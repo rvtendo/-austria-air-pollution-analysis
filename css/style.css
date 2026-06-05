@@ -2726,3 +2726,12 @@ body{
     color: #888;
     margin-top: 10px;
 }
+/* workflow footer styles */
+.small-footer {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.small-footer .row-pb-md {
+    padding-bottom:  0 !important;
+}
