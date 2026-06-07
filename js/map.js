@@ -181,19 +181,7 @@ function updateGeneralLegend(title, imagePath) {
       no2December.setVisible(true);
       pm10December.setVisible(false);
       pm25December.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Amac.setVisible(false);
-      lccMap.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
+
   
   
       document.getElementById("pm10DecemberCheck").checked = false;
@@ -211,20 +199,7 @@ function updateGeneralLegend(title, imagePath) {
       pm10December.setVisible(true);
       no2December.setVisible(false);
       pm25December.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Amac.setVisible(false);
-      lccMap.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-  
+
   
       document.getElementById("no2DecemberCheck").checked = false;
       document.getElementById("pm25DecemberCheck").checked = false;
@@ -241,20 +216,7 @@ function updateGeneralLegend(title, imagePath) {
       pm25December.setVisible(true);
       no2December.setVisible(false);
       pm10December.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Amac.setVisible(false);
-      lccMap.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-     
+
   
   
       document.getElementById("no2DecemberCheck").checked = false;
@@ -274,19 +236,7 @@ function updateGeneralLegend(title, imagePath) {
       no2Average.setVisible(true);
       pm10Average.setVisible(false);
       pm25Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Amac.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-      lccMap.setVisible(false);
+
   
       document.getElementById("pm10AverageCheck").checked = false;
       document.getElementById("pm25AverageCheck").checked = false;
@@ -303,20 +253,7 @@ function updateGeneralLegend(title, imagePath) {
       pm10Average.setVisible(true);
       no2Average.setVisible(false);
       pm25Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Amac.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-      lccMap.setVisible(false);
-  
+ 
   
       document.getElementById("no2AverageCheck").checked = false;
       document.getElementById("pm25AverageCheck").checked = false;
@@ -333,20 +270,7 @@ function updateGeneralLegend(title, imagePath) {
       pm25Average.setVisible(true);
       no2Average.setVisible(false);
       pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Amac.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-      lccMap.setVisible(false);
-  
+
   
       document.getElementById("no2AverageCheck").checked = false;
       document.getElementById("pm10AverageCheck").checked = false;
@@ -365,19 +289,7 @@ function updateGeneralLegend(title, imagePath) {
       no2Concentration.setVisible(true);
       pm10Concentration.setVisible(false);
       pm25Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Amac.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-      lccMap.setVisible(false);
+
   
   
       document.getElementById("pm10ConcentrationCheck").checked = false;
@@ -395,19 +307,7 @@ function updateGeneralLegend(title, imagePath) {
       pm10Concentration.setVisible(true);
       no2Concentration.setVisible(false);
       pm25Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Amac.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-      lccMap.setVisible(false);
+
   
   
       document.getElementById("no2ConcentrationCheck").checked = false;
@@ -425,20 +325,7 @@ function updateGeneralLegend(title, imagePath) {
       pm25Concentration.setVisible(true);
       no2Concentration.setVisible(false);
       pm10Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Amac.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-      lccMap.setVisible(false);
-  
+
   
       document.getElementById("no2ConcentrationCheck").checked = false;
       document.getElementById("pm10ConcentrationCheck").checked = false;
@@ -461,19 +348,7 @@ function updateGeneralLegend(title, imagePath) {
       no2Amac.setVisible(true);
       pm10Amac.setVisible(false);
       pm25Amac.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-      lccMap.setVisible(false);
+    
   
       document.getElementById("pm10AmacCheck").checked = false;
       document.getElementById("pm25AmacCheck").checked = false;
@@ -490,19 +365,7 @@ function updateGeneralLegend(title, imagePath) {
       pm10Amac.setVisible(true);
       no2Amac.setVisible(false);
       pm25Amac.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-      lccMap.setVisible(false);
+
   
       document.getElementById("no2AmacCheck").checked = false;
       document.getElementById("pm25AmacCheck").checked = false;
@@ -519,19 +382,7 @@ function updateGeneralLegend(title, imagePath) {
       pm25Amac.setVisible(true);
       no2Amac.setVisible(false);
       pm10Amac.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
-      lccMap.setVisible(false);
+    
   
       document.getElementById("no2AmacCheck").checked = false;
       document.getElementById("pm10AmacCheck").checked = false;
@@ -550,21 +401,6 @@ function updateGeneralLegend(title, imagePath) {
     if (this.checked) {
   
       lccMap.setVisible(true);
-      pm25Amac.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      no2Bivariate.setVisible(false);
-      pm10Bivariate.setVisible(false);
-      pm25Bivariate.setVisible(false);
       
   
       document.querySelector(".map-legend").style.display = "block";
@@ -593,20 +429,7 @@ function updateGeneralLegend(title, imagePath) {
       no2Bivariate.setVisible(true);
       pm10Bivariate.setVisible(false);
       pm25Bivariate.setVisible(false);
-      pm25Amac.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      lccMap.setVisible(false);
-  
+ 
       document.getElementById("pm10BivariateCheck").checked = false;
       document.getElementById("pm25BivariateCheck").checked = false;
   
@@ -622,19 +445,7 @@ function updateGeneralLegend(title, imagePath) {
       pm10Bivariate.setVisible(true);
       no2Bivariate.setVisible(false);
       pm25Bivariate.setVisible(false);
-      pm25Amac.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      lccMap.setVisible(false);
+    
   
       document.getElementById("no2BivariateCheck").checked = false;
       document.getElementById("pm25BivariateCheck").checked = false;
@@ -651,19 +462,7 @@ function updateGeneralLegend(title, imagePath) {
       pm25Bivariate.setVisible(true);
       no2Bivariate.setVisible(false);
       pm10Bivariate.setVisible(false);
-      pm25Amac.setVisible(false);
-      no2Amac.setVisible(false);
-      pm10Amac.setVisible(false);
-      pm25Concentration.setVisible(false);
-      no2Concentration.setVisible(false);
-      pm10Concentration.setVisible(false);
-      pm25Average.setVisible(false);
-      no2Average.setVisible(false);
-      pm10Average.setVisible(false);
-      no2December.setVisible(false);
-      pm10December.setVisible(false);
-      pm25December.setVisible(false);
-      lccMap.setVisible(false);
+      
   
       document.getElementById("no2BivariateCheck").checked = false;
       document.getElementById("pm10BivariateCheck").checked = false;
@@ -708,15 +507,56 @@ function updateGeneralLegend(title, imagePath) {
   }
 
 
+// Opacity
 
 
+  function connectOpacitySlider(sliderId, valueId, layers) {
+    const slider = document.getElementById(sliderId);
+    const valueText = document.getElementById(valueId);
+  
+    slider.addEventListener("input", function () {
+      const opacity = this.value / 100;
+      valueText.innerHTML = this.value + "%";
+  
+      layers.forEach(layer => {
+        layer.setOpacity(opacity);
+      });
+    });
+  }
 
-
-
-
-
-
-
+  connectOpacitySlider("decemberOpacity", "decemberOpacityValue", [
+    no2December,
+    pm10December,
+    pm25December
+  ]);
+  
+  connectOpacitySlider("averageOpacity", "averageOpacityValue", [
+    no2Average,
+    pm10Average,
+    pm25Average
+  ]);
+  
+  connectOpacitySlider("concentrationOpacity", "concentrationOpacityValue", [
+    no2Concentration,
+    pm10Concentration,
+    pm25Concentration
+  ]);
+  
+  connectOpacitySlider("amacOpacity", "amacOpacityValue", [
+    no2Amac,
+    pm10Amac,
+    pm25Amac
+  ]);
+  
+  connectOpacitySlider("bivariateOpacity", "bivariateOpacityValue", [
+    no2Bivariate,
+    pm10Bivariate,
+    pm25Bivariate
+  ]);
+  
+  connectOpacitySlider("lccOpacity", "lccOpacityValue", [
+    lccMap
+  ]);
 
 
 

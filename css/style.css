@@ -2735,3 +2735,18 @@ body{
 .small-footer .row-pb-md {
     padding-bottom:  0 !important;
 }
+
+/*opacity */
+
+.layer-panel input[type="range"] {
+  width: 100%;
+  margin: 5px 0 8px;
+}
+
+.layer-panel span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
